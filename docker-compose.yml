@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+    server:
+        build:
+            context: ./server/
+            dockerfile: Dockerfile
+            target: dev
+        ports:
+            - "8080:8080"
+        volumes:
+            - ./server/:/app
+        tty: true
+    #client:
+    #    build:
+    #        context: ./client/
+    #        dockerfile: Dockerfile
+    #        target: dev
+    #    volumes:
+    #        - ./client:/app
+    #    ports:
+    #        - 3434:3000
