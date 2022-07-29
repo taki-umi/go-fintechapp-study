@@ -27,6 +27,13 @@ func foo() {
 	fmt.Println(xi, xf64, xs, xt, xf)
 }
 
+func string_practice() {
+	fmt.Println(string("Hello World"[0]))
+
+	var s string = "Hello World"
+	s = stirngs.Replace(s, "H", "X")
+}
+
 func main() {
 	fmt.Println("Hello, World!", time.Now())
 	fmt.Println(user.Current())
@@ -34,4 +41,5 @@ func main() {
 	fmt.Println(i, f64, s, t, f)
 
 	foo()
+	string_practice()
 }
