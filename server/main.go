@@ -2,8 +2,7 @@ package main
 
 import (
 	"fmt"
-	"os/user"
-	"time"
+	"regexp"
 )
 
 const (
@@ -30,16 +29,36 @@ func foo() {
 func string_practice() {
 	fmt.Println(string("Hello World"[0]))
 
-	var s string = "Hello World"
-	s = stirngs.Replace(s, "H", "X")
+}
+
+func map_practice() {
+	m := map[string]int{"apple": 100, "banana": 200}
+	fmt.Println(m)
+	fmt.Println(m["apple"])
+	m["banana"] = 300
+	fmt.Println(m)
+	m["new"] = 500
+	fmt.Println(m)
+
+	v, ok := m["apple"]
+	fmt.Println(v, ok)
+
+	m2 := make(map[string]int)
+	m2["pc"] = 5000
+	fmt.Println(m2)
+
+	match, _ := regexp.MatchString("a([a-z]+)e", "apple")
+	fmt.Println(match)
 }
 
 func main() {
-	fmt.Println("Hello, World!", time.Now())
-	fmt.Println(user.Current())
+	// fmt.Println("Hello, World!", time.Now())
+	// fmt.Println(user.Current())
 
-	fmt.Println(i, f64, s, t, f)
+	// fmt.Println(i, f64, s, t, f)
 
-	foo()
-	string_practice()
+	// foo()
+	// string_practice()
+	map_practice()
+
 }
